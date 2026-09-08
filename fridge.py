@@ -12,7 +12,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 ## Configuring the api key
-genai.configure(api_key="AIzaSyDlQkrLlAetxHZYfMXEnKP7-xI4bCdcbe8")
+genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 ## Function to load Gemini Vision Pro Vision Model and Get response
 def get_gemini_response(input, image, prompt):
